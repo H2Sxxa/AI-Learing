@@ -80,3 +80,5 @@ check_map(setB2,setC,funcB)
 print("A -> C")
 check_map(setA,setC,lambda x:funcB(funcA(x)))
 
+'''
+'''
