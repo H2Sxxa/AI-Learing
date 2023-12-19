@@ -49,4 +49,16 @@ mod sort {
         //assert_eq!(test_v, vec![3, 5, 8, 9, 12, 12, 90]);
         println!("Bubble Sort -> {:?}", test_v)
     }
+
+    #[test]
+    fn test_insertion_sort() {
+        //let mut test_v: V = vec![9, 12, 3, 8, 12, 5, 90];
+        //assert_eq!(test_v, vec![3, 5, 8, 9, 12, 12, 90]);
+        //println!("Insertion Sort -> {:?}", test_v)
+    }
+
+    #[test]
+    fn misc_test() {
+        println!("{}", ((((7_f64 / 3_f64) * 10_f64) as i32) as f64) / 10_f64)
+    }
 }
