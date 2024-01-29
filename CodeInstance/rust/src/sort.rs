@@ -16,6 +16,7 @@ pub fn selection_sort(target: &mut V) {
     }
 }
 
+/// 冒泡排序
 pub fn bubble_sort(target: &mut V) {
     let max_index = target.len() - 1;
     let mut flag = true;
@@ -30,6 +31,21 @@ pub fn bubble_sort(target: &mut V) {
         }
     }
 }
+
+/// 插入排序
+pub fn insertion_sort(target: &mut V) {
+    for mut index in 1..target.len() {
+        while index > 0 {
+            index -= 1;
+            if target[index + 1] > target[index] {
+                break;
+            }
+            target.swap(index, index + 1);
+        }
+    }
+}
+
+/// 插入排序（二分）
 
 #[cfg(test)]
 mod sort {
@@ -52,9 +68,10 @@ mod sort {
 
     #[test]
     fn test_insertion_sort() {
-        //let mut test_v: V = vec![9, 12, 3, 8, 12, 5, 90];
-        //assert_eq!(test_v, vec![3, 5, 8, 9, 12, 12, 90]);
-        //println!("Insertion Sort -> {:?}", test_v)
+        let mut test_v: V = vec![9, 12, 3, 8, 12, 5, 90];
+        insertion_sort(&mut test_v);
+        assert_eq!(test_v, vec![3, 5, 8, 9, 12, 12, 90]);
+        println!("Insertion Sort -> {:?}", test_v)
     }
 
     #[test]
